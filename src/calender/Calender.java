@@ -13,10 +13,12 @@ public class Calender {
 		Calender c = new Calender();
 		int month;
 		System.out.println("");
-		
+				while(true) {
 				System.out.println("몇월 달력을 출력하시겠습니까?");
 				month=scan.nextInt();
-				while(month>0) {
+				if(month<1) {
+					break;
+				}
 				int date=c.getMaxDaysOfMonth(month);
 				System.out.println("일     월     화     수     목     금     토");		
 					for(int day=1 ;day<date;) {
